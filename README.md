@@ -37,11 +37,13 @@ Plugin setting page has 178 languages, 8 themes & 4 plugins to select from. Once
 ![Screenshot](http://www.hashtagerrors.com/assets/uploads/prism-setting-page.jpg)
  
 **Syntax Highlighter Field**
+
 The plugin adds a `Syntax Highlighter` fieldtype which then displays a block to add your code, select code type, add a caption and specify the lines to be highlighted (if enabled in plugin setting).
 
 ![Screenshot](http://www.hashtagerrors.com/assets/uploads/prism-fieldtype.jpg)
 
 **Syntax Highlighter Frontend**
+
 Using`{{ craft.syntaxHighlighter.render(entry.fieldHandle) }}` in template will show the highlighted code in the frontend.
 ![Screenshot](http://www.hashtagerrors.com/assets/uploads/prism-frontend.jpg)
 
