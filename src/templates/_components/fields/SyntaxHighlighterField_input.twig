@@ -1,0 +1,70 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Syntax Highlighter plugin for Craft CMS 3.x
+ *
+ * SyntaxHighlighterField Field Input
+ *
+ * @author    Hashtag Errors
+ * @copyright Copyright (c) 2019 Hashtag Errors
+ * @link      http://hashtagerrors.com
+ * @package   SyntaxHighlighter
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% set setting = craft.app.getModule('syntax-highlighter').getSettings() %}
+
+{% if value.type is defined and value.type %}
+	{% set codetype = value.type %}
+{% elseif setting.defaultLanguage is defined and setting.defaultLanguage %}
+	{% set codetype = setting.defaultLanguage %}
+{% else %}
+	{% set codetype = '' %}
+{% endif %}
+
+<div class="syntaxhighlighter-box" id="{{ name }}">
+	{{ forms.textarea({
+		id: name~'-code',
+		name: name~'[code]',
+		rows: 10,
+		label: 'Code',
+		class: 'codearea',
+		value: value.code is defined and value.code ? value.code
+	}) }}
+	
+	<div class="syntaxhighlighter-field">
+		<div class="syntaxhighlighter-type">
+			<div class="heading">
+				<label>Code Type</label>
+			</div>
+			{{ forms.select({
+				id: name~'-Type',
+				name: name~'[type]',
+				options: selectedLangauges,
+				value: codetype
+			}) }}
+			{% if setting.enableLineHighlight %}
+				{{ forms.textField({
+					id: name~'-highlightedLine',
+					name: name~'[highlightedLine]',
+					placeholder: '1-2, 5, 9-20',
+					label: 'Highlighted Line',
+					value: value.highlightedLine is defined and value.highlightedLine ? value.highlightedLine
+				}) }}
+			{% endif %}
+		</div>
+
+		<div class="syntaxhighlighter-caption">
+			{{ forms.textField({
+				id: name~'-caption',
+				name: name~'[caption]',
+				placeholder: 'Code Caption',
+				label: 'Code Caption',
+				value: value.caption is defined and value.caption ? value.caption
+			}) }}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,43 @@
+{
+    "name": "hashtagerrors/syntax-highlighter",
+    "description": "The power of Prism syntax highlighting in Craft",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "syntax highlighter"
+    ],
+    "support": {
+        "docs": "https://github.com/hashtagerrors/syntax-highlighter/blob/master/README.md",
+        "issues": "https://github.com/hashtagerrors/syntax-highlighter/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hashtag Errors",
+            "homepage": "http://hashtagerrors.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "hashtagerrors\\syntaxhighlighter\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Syntax Highlighter",
+        "handle": "syntax-highlighter",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/hashtagerrors/syntax-highlighter/master/CHANGELOG.md",
+        "components": {
+            "syntaxHighlighterService": "hashtagerrors\\syntaxhighlighter\\services\\SyntaxHighlighterService"
+        },
+        "class": "hashtagerrors\\syntaxhighlighter\\SyntaxHighlighter"
+    }
+}

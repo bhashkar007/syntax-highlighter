@@ -1,0 +1,101 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Syntax Highlighter plugin for Craft CMS 3.x
+ *
+ * Syntax Highlighter Settings.twig
+ *
+ * @author    Hashtag Errors
+ * @copyright Copyright (c) 2019 Hashtag Errors
+ * @link      http://hashtagerrors.com
+ * @package   SyntaxHighlighter
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("hashtagerrors\\syntaxhighlighter\\assetbundles\\syntaxhighlighter\\SyntaxHighlighterAsset") %}
+
+{{ forms.checkboxSelectField({
+	label: 'Choose Languages',
+	instructions: 'Choose Languages that should be enabled.',
+	id: 'selectedLanguages',
+	name: 'selectedLanguages',
+	class: 'syntaxhighlighter-container',
+	showAllOption: true,
+    required: true,
+	options: langauges,
+	values: settings.selectedLanguages,
+	errors: settings.getErrors('selectedLanguages')})
+}}
+
+{{ forms.selectField({
+    label: 'Default Language',
+    instructions: 'Default language in the drop down menu',
+    id: 'defaultLanguage',
+    name: 'defaultLanguage',
+    options: selectedLangauges,
+    value: settings.defaultLanguage,
+    errors: settings.getErrors('defaultLanguage')})
+}}
+
+{{ forms.selectField({
+    label: 'Theme',
+    id: 'selectedTheme',
+    name: 'selectedTheme',
+    options: themes,
+    value: settings.selectedTheme,
+    errors: settings.getErrors('selectedTheme')})
+}}
+
+{{ forms.lightswitchField({
+    label: 'Line Numbers',
+    instructions: 'Enable Line Numbers',
+    id: 'enableLineNumbers',
+    name: 'enableLineNumbers',
+    value: 1,
+    on: settings.enableLineNumbers,
+    errors: settings.getErrors('enableLineNumbers')})
+}}
+
+{{ forms.lightswitchField({
+    label: 'Line Highlight',
+    instructions: 'Enable Line Highlight.',
+    id: 'enableLineHighlight',
+    name: 'enableLineHighlight',
+    value: 1,
+    on: settings.enableLineHighlight,
+    errors: settings.getErrors('enableLineHighlight')})
+}}
+
+{{ forms.lightswitchField({
+    label: 'Show Language',
+    instructions: 'Enable Show Language',
+    id: 'showLanguage',
+    name: 'showLanguage',
+    value: 1,
+    on: settings.showLanguage,
+    errors: settings.getErrors('showLanguage')})
+}}
+
+{{ forms.lightswitchField({
+    label: 'Copy to Clipboard Button',
+    instructions: 'Enable Copy to Clipboard Button',
+    id: 'copytoClipboardButton',
+    name: 'copytoClipboardButton',
+    value: 1,
+    on: settings.copytoClipboardButton,
+    errors: settings.getErrors('copytoClipboardButton')})
+}}
+
+{{ forms.textField({
+    label: 'Max Height',
+    instructions: 'Set maximum height of code container to avoid long scrolling of the page. Recommended 500px. Leave empty or 0 to ignore',
+    id: 'maxHeight',
+    name: 'maxHeight',
+    value: settings.maxHeight,
+    size: '10',
+    maxlength: '4',
+    errors: settings.getErrors('maxHeight')})
+}}

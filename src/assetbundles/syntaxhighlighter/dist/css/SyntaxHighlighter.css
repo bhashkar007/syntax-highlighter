@@ -1,0 +1,26 @@
+/**
+ * Syntax Highlighter plugin for Craft CMS
+ *
+ * Syntax Highlighter CSS
+ *
+ * @author    Hashtag Errors
+ * @copyright Copyright (c) 2019 Hashtag Errors
+ * @link      http://hashtagerrors.com
+ * @package   SyntaxHighlighter
+ * @since     1.0.0
+ */
+
+.syntaxhighlighter-container div{
+	width: 33%;
+	float: left;
+}
+@media only screen and (max-width: 767px) {
+	.syntaxhighlighter-container div{
+		width: 50%;
+	}
+}
+@media only screen and (max-width: 420px) {
+	.syntaxhighlighter-container div{
+		width: 100%;
+	}
+}

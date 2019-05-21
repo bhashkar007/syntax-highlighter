@@ -1,0 +1,15 @@
+{% do view.registerAssetBundle("hashtagerrors\\syntaxhighlighter\\assetbundles\\syntaxhighlighterfrontend\\SyntaxHighlighterFrontEndAsset") %}
+
+<div class="code-section">
+	<div class="code-wrapper">
+		<pre class="code-container {% if setting.enableLineNumbers %}line-numbers{% endif %}" {% if setting.enableLineHighlight and field.highlightedLine is defined and field.highlightedLine %}data-line="{{ field.highlightedLine }}"{% endif %}>{% spaceless %}
+			<code class="language-{{ field.type }}">{{ field.code|escape }}</code>
+		{% endspaceless %}
+		</pre>
+		{% if field.caption %}
+			<div class="code-caption">
+				<h6>{{ field.caption }}</h6>
+			</div>
+		{% endif %}
+	</div>
+</div>

@@ -1,0 +1,26 @@
+/**
+ * Syntax Highlighter plugin for Craft CMS
+ *
+ * SyntaxHighlighterField Field CSS
+ *
+ * @author    Hashtag Errors
+ * @copyright Copyright (c) 2019 Hashtag Errors
+ * @link      http://hashtagerrors.com
+ * @package   SyntaxHighlighter
+ * @since     1.0.0
+ */
+
+.syntaxhighlighter-box{
+	padding: 15px;
+  	border: 1px solid rgba(0, 0, 20, 0.1);
+}
+.syntaxhighlighter-type{
+	margin: 15px 0;
+}
+.syntaxhighlighter-type .heading{
+	margin-bottom: 5px;
+}
+.syntaxhighlighter-type label{
+	font-weight: bold;
+    color: #576575;
+}
