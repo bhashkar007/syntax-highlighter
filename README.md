@@ -103,4 +103,6 @@ NOTE: Since this plugin build files every time it's plugin setting is saved, the
 * Prism's [File Highlight](https://prismjs.com/plugins/file-highlight/) plugin.
 * Prism's Other plugins.
 
+New ideas are always welcome. You can post your ideas, requrest or issue [here](https://github.com/hashtagerrors/syntax-highlighter/issues)
+
 Brought to you by [Hashtag Errors](http://hashtagerrors.com)
