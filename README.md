@@ -105,4 +105,10 @@ NOTE: Since this plugin build files every time it's plugin setting is saved, the
 
 New ideas are always welcome. You can post your ideas, requrest or issue [here](https://github.com/hashtagerrors/syntax-highlighter/issues)
 
+### Loved It? 
+
+Show your Love and Support by buying me a cup of Coffee !
+
+<a href="https://ko-fi.com/hashtagerrors" target="_blank"><img src="http://www.hashtagerrors.com/assets/uploads/buy-me-a-coffee.png" alt="Buy Me A Coffee" width="200"></a>
+
 Brought to you by [Hashtag Errors](http://hashtagerrors.com)
