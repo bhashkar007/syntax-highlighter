@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2019 Hashtag Errors
  */
 
-namespace hashtagerrors\syntaxhighlighter\assetbundles\SyntaxHighlighterFrontEnd;
+namespace hashtagerrors\syntaxhighlighter\assetbundles\syntaxhighlighterfrontend;
 
 use Craft;
 use craft\web\AssetBundle;
@@ -29,7 +29,7 @@ class SyntaxHighlighterFrontEndAsset extends AssetBundle
      */
     public function init()
     {
-        $this->sourcePath = "@hashtagerrors/syntaxhighlighter/assetbundles/SyntaxHighlighterFrontEnd/dist";
+        $this->sourcePath = "@hashtagerrors/syntaxhighlighter/assetbundles/syntaxhighlighterfrontend/dist";
         
         $this->js = [
             'prism.js',

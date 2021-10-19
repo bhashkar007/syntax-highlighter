@@ -11,7 +11,7 @@
 namespace hashtagerrors\syntaxhighlighter\fields;
 
 use hashtagerrors\syntaxhighlighter\SyntaxHighlighter;
-use hashtagerrors\syntaxhighlighter\assetbundles\SyntaxHighlighterField\SyntaxHighlighterFieldAsset;
+use hashtagerrors\syntaxhighlighter\assetbundles\syntaxhighlighterfield\SyntaxHighlighterFieldAsset;
 
 use Craft;
 use craft\base\ElementInterface;
