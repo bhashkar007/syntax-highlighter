@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2019 Hashtag Errors
  */
 
-namespace hashtagerrors\syntaxhighlighter\assetbundles\SyntaxHighlighterField;
+namespace hashtagerrors\syntaxhighlighter\assetbundles\syntaxhighlighterfield;
 
 use Craft;
 use craft\web\AssetBundle;
@@ -29,7 +29,7 @@ class SyntaxHighlighterFieldAsset extends AssetBundle
      */
     public function init()
     {
-        $this->sourcePath = "@hashtagerrors/syntaxhighlighter/assetbundles/SyntaxHighlighterField/dist";
+        $this->sourcePath = "@hashtagerrors/syntaxhighlighter/assetbundles/syntaxhighlighterfield/dist";
 
         $this->depends = [
             CpAsset::class
